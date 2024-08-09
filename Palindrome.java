@@ -1,5 +1,3 @@
-package logicalProblem.String_Basics;
-
 public class Palindrome
 {
     public void pal(String word)

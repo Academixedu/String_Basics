@@ -1,4 +1,4 @@
-package logicalProblem.String_Basics;
+
 public class Printingeven
 {
   public void even(String s)
