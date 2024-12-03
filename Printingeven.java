@@ -1,32 +1,34 @@
 
-public class Printingeven {
-public void dynamic(String s) {
-	//Splitting
-	String []words=s.split(" ");
-	//Feeding Each word into one Array	
-	int[]wordsLength=new int[words.length];
-	
-	for(int i=0;i<words.length;i++) {
-		wordsLength[i]=words[i].length();
-	}
-	for(int i=0;i<words.length;i++) {
-		if(wordsLength[i]%2==0) {
-			System.out.println(words[i]+" "+words[i].length());
-		}
-	}
-}
-public void statical(String s) {
-	for(String word:s.split(" ")) {
-		if(word.length()%2==0) {
-			System.out.println(word+" "+word.length());
-		}
-	}
-}
-	
-	public static void main(String[] args) {
-	System.out.println("Even Length words");
-	String s="Oppenhimmer introduced Atomic Bomb";
-   Printingeven p=new Printingeven();
-   p.dynamic(s);
-}
+public class Printingeven
+{
+  public void even(String s)
+  {
+    String[] word=s.split(" "); //Spliting every word till Space("space");
+
+    int[] wordsLength=new int [word.length];//Int type of array which give length int[] wordsLength=> 7
+
+    for(int i=0;i<=word.length-1;i++)
+    {
+        wordsLength[i]=word[i].length();
+           //[Christopher , Nolan , is , the , director , of , Oppenheimer] =>string type of aaray
+                //[11          ,5      , 2  , 3   , 8        , 2  ,  11 ] => integer type of array
+    }
+    for (int i=0;i<=word.length-1;i++)
+    {
+        if(wordsLength[i]%2==0)
+        {
+            System.out.println("-----------");
+            System.out.println(word[i]+" : "+wordsLength[i]);
+        }
+    }
+
+
+  }
+
+  public static void main(String[] args) 
+  {
+    String s="Christopher Nolan is the director of Oppenheimer";
+    Printingeven aobj=new Printingeven();
+    aobj.even(s);
+  }
 }
